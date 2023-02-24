@@ -1,5 +1,5 @@
 # Clone-Uber-main
 
-![Rendu Desktop](https://imgur.com/sDcfYBz)
+<img src="https://imgur.com/sDcfYBz" alt="Rendu Desktop" title="Rendu Desktop">
 
-![Rendu Mobile](https://imgur.com/meZviwW)
+<img src="https://imgur.com/meZviwW" alt="Rendu Mobile" title="Rendu Mobile">
