@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="./assets/script.js"></script>
     <link
       rel="icon"
       type="image/x-icon"
@@ -17,15 +20,15 @@
       <div class="container">
         <nav>
           <div>
-            <ul>
-              <li><a href="#" class="logo">Uber</a></li>
+            <a href="#" class="logo">Uber</a>
+            <ul class="nav-links">
               <li><a href="#">Company</a></li>
               <li><a href="#">Safety</a></li>
               <li><a href="#">Help</a></li>
             </ul>
           </div>
           <div>
-            <ul>
+            <ul id="nav-links" class="nav-links">
               <li><a href="#">FR-FR</a></li>
               <li><a href="#">Products</a></li>
               <li><a href="#">Log in</a></li>
@@ -35,6 +38,7 @@
           <div class="hamburger">
             <span class="hamburger-bar"></span
             ><span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
           </div>
         </nav>
       </div>
@@ -97,7 +101,7 @@
       </div>
     </section>
 
-    <section id="engagements__section" class="bg-light">
+    <section data-aos="zoom-in" id="engagements__section" class="bg-light">
       <div class="container">
         <h3>Où que vous alliez, votre sécurité est notre priorité</h3>
         <div class="split">
@@ -136,7 +140,7 @@
       </div>
     </section>
 
-    <section id="infos__section" class="bg-light">
+    <section data-aos="fade-up" id="infos__section" class="bg-light">
       <div class="container">
         <div class="split">
           <div class="infos__section__card">
@@ -183,13 +187,13 @@
       <div class="container">
         <h3>Retrouvez encore plus de fonctionnalités dans nos applications</h3>
         <div class="split">
-          <a href="#" class="app__card">
+          <a data-aos="fade-right" href="#" class="app__card">
             <span>Uber</span>
             <p class="app__titre">
               Téléchargez l'application pour les chauffeurs et les coursiers
             </p>
           </a>
-          <a href="#" class="app__card">
+          <a data-aos="fade-left" href="#" class="app__card">
             <span>Uber</span>
             <p class="app__titre">Téléchargez l'application Uber</p>
           </a>
@@ -207,5 +211,8 @@
         </nav>
       </div>
     </footer>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

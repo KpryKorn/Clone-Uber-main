@@ -105,8 +105,9 @@ header nav a:hover {
   border-radius: 30px;
   background: #333;
 }
-header nav ul,
-.nav-links {
+
+.nav-links,
+header nav div:first-of-type {
   display: flex;
   align-items: center;
 }
@@ -136,11 +137,44 @@ header nav ul,
   width: 25px;
   height: 3px;
   background-color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 50rem) {
   .hamburger {
     display: block;
+  }
+
+  .hamburger.active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    left: 0;
+    top: -100%;
+    gap: 0;
+    flex-direction: column;
+    background: var(--clr-neutral-900);
+    width: 100vw;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  .nav-links.active {
+    top: 70px;
+  }
+  .nav-links.active:first-child {
+    top: 220px;
+  }
+
+  header nav ul li {
+    margin: 1rem 0;
   }
 }
 
@@ -317,12 +351,20 @@ footer nav {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 40rem) {
+@media (max-width: 50rem) {
   .infos__section__card {
     margin-block: 1rem;
   }
   .main__cta__options {
     gap: 2rem;
+  }
+
+  .app__titre {
+    font-size: 1.2rem;
+  }
+  .app__card span {
+    padding: 1.5rem 0.75rem;
+    font-size: 2rem;
   }
   .app__card {
     margin-block: 1rem;
