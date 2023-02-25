@@ -309,6 +309,7 @@ section#infos__section {
 
 section#applications__section {
   padding-block: 4rem;
+  overflow: hidden;
 
   background: #f1f1f1;
   color: var(--clr-neutral-900);
